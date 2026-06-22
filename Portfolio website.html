@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yukta Sachdev</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("yasachdev2@gmail.com");
+            document.getElementById("copyMsg").innerHTML = "Copied!";
+        }
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            if (name === "" || email === "") {
+                alert("Please fill in your name and email.");
+                return false;
+            }
+            alert("Thank you " + name + "! I will get back to you soon.");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <span class="nav-name">Yukta Sachdev</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="about">
+        <div class="cv-box">
+            <div class="cv-header">
+                <h3>YUKTA SACHDEV</h3>
+                <p>CS Undergraduate · Big Data & AI · University of Wollongong in Dubai</p>
+                <p>yasachdev2@gmail.com · linkedin.com/in/yuktaarunsachdev · Dubai, UAE</p>
+            </div>
+
+            <div class="cv-section">
+                <h4>PROFILE</h4>
+                <p>First-year Computer Science student specializing in Big Data & AI, with hands-on experience in full-stack web development, UI/UX design, and data analytics.</p>
+            </div>
+
+            <div class="cv-section">
+                <h4>RELEVANT SKILLS</h4>
+                <p><strong>Technical:</strong> Python · Frontend & Backend Development · C++</p>
+                <p><strong>Soft Skills:</strong> Stakeholder Communication · Cross-functional Collaboration · Graphic Design · Content Strategy</p>
+            </div>
+
+            <div class="cv-section">
+                <h4>EXPERIENCE</h4>
+                <p><strong>UI/UX Design Intern</strong> | Bharat Responsible AI Forum (BRAIF) · Jan 2026 – Present</p>
+                <ul>
+                    <li>Built the Delhi Dialogue website end-to-end (frontend + backend)</li>
+                    <li>Designed UI/UX for an AI policy platform serving government and academic stakeholders</li>
+                </ul>
+            </div>
+
+            <div class="cv-section">
+                <h4>EDUCATION</h4>
+                <p><strong>Bachelor of Computer Science</strong> – Big Data & AI</p>
+                <p>University of Wollongong in Dubai · 2025 – Present</p>
+            </div>
+
+            <div style="text-align:center; margin-top: 20px;">
+                <a href="yukta_sachdev_cv.pdf" download class="btn-primary">Download Full CV (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p class="email-line">
+            yasachdev2@gmail.com
+            <button onclick="copyEmail()">Copy Email</button>
+            <span id="copyMsg"></span>
+        </p>
+        <form action="https://formspree.io/f/xzdlbogk" method="POST">
+            <label>Your name: <input type="text" name="name" id="name"></label>
+            <label>Your email:<input type="email" name="email"></label>
+            <label>Your message: <textarea name="message"></textarea>
+            </label> <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Yukta Sachdev · Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+</body>
+</html>

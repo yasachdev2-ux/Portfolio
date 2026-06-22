@@ -1,0 +1,81 @@
+/* Water-inspired color palette */
+:root {
+    --deep-water: #011c59;
+    --calm-water: #1a56bd;
+    --foam-white: rgba(255, 255, 255, 0.85);
+    --glass: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* Animated water gradient background */
+    background: linear-gradient(135deg, #006994, #79a7d3, #a2d2ff);
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-name { font-weight: bold; font-size: 1.5rem; color: white; }
+.nav-links a { margin-left: 20px; color: white; text-decoration: none; }
+
+/* The CV Box (Glassmorphism effect) */
+.cv-box {
+    max-width: 800px;
+    margin: 50px auto;
+    background: var(--foam-white);
+    padding: 40px;
+    border-radius: 30px; /* Rounded corners for fluid look */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Typography & Sections */
+h2, h3, h4 { color: var(--deep-water); }
+.cv-section { margin-bottom: 25px; }
+
+/* Buttons */
+button, .btn-primary, input[type="submit"] {
+    background: var(--deep-water);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, input[type="submit"]:hover { background: var(--calm-water); }
+
+/* Contact Form Styling */
+#contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: var(--glass);
+    border-radius: 30px;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+}
+
+footer { text-align: center; color: white; padding: 20px; }
